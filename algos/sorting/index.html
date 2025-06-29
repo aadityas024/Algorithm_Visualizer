@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Algorithm Visualizer</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="bg-dark">
+  <div class="container-fluid">
+    <!-- Header -->
+    <div id="header" class="row py-3 justify-content-center align-items-center">
+      <!-- Header Left -->
+      <div id="headerLeft" class="col-md-4 d-flex justify-content-center align-items-center">
+        <div class="slidecontainer mr-3 text-center">
+          <div><input type="range" min="50" max="500" value="150" class="form-range slider" id="speedSlider" /></div>
+          <div class="speedValue">Speed</div>
+        </div>
+        <div class="slidecontainer text-center">
+          <div><input type="range" min="10" max="100" value="50" class="form-range slider" id="barSlider" /></div>
+          <div class="sliderValue">Bars: 50</div>
+        </div>
+        <button class="btn btn-primary mx-2" id="generateButton">Generate</button>
+      </div>
+      
+        <!-- Header Center -->
+      <div class="col-md-4 d-flex justify-content-center align-items-center">
+        <a href="../../index.html" class="navbar-brand text-center"><div id="title">Algorithm Visualizer</div></a>
+      </div>
+    
+       <!-- Header right -->
+      <div id="headerRight" class="col-md-4 d-flex justify-content-center align-items-center">
+        
+        <select id="sort_type" name="sort_type" class="form-control">
+          <option value="insertion" selected>Insertion Sort</option>
+          <option value="bubble">Bubble Sort</option>
+          <option value="merge">Merge Sort</option>
+          <option value="selection">Selection Sort</option>
+          <option value="quick">Quick Sort</option>
+          <option value="heap">Heap Sort</option>
+        </select>
+      </div>
+      <div></div>
+      
+       
+    </div>
+
+    <!-- Container -->
+    <div id="container" class="mt-4"></div>
+
+    <!-- Buttons -->
+    <div id="buttonsdiv" class="text-center mt-4">
+      <button type="button" id="sortButton" class="btn btn-secondary mx-2">Sort</button>
+      <button type="button" id="pauseButton" class="btn btn-secondary mx-2">Pause</button>
+      <button type="button" id="stopButton" class="btn btn-danger mx-2">Stop</button>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="./script.js"></script>
+</body>
+</html>

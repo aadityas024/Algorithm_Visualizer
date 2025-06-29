@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Algorithm Visualizer</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="header">
+      <div style="width: 25%;"></div>
+      <div><a href="../../index.html" id="title"><div>Algorithm Visualizer</div></a></div>
+      <div id="header-right">
+        <div style="height:20px;"></div>
+          <select id="algorithm_type" name="sort_type">
+            <option value="dijkstra" selected>Dijkstra's Algorithm</option>
+            <!-- <option value="Astar">A* Search algorithm</option> -->
+            <option value="bfs">BFS(Breadth first search)</option>
+            <option value="dfs">DFS(Depth first search)</option>
+          </select>
+      </div>
+    </div>
+
+    <div id="indicator-container">
+      <div class="indicator">
+        <div class="indicator-block" id="start-indicator"></div>
+        <div>Starting Position</div>
+      </div>
+      <div class="indicator">
+        <div class="indicator-block" id="end-indicator"></div>
+        <div>Ending Position</div>
+      </div>
+      <div class="indicator">
+        <div class="indicator-block" id="visited-indicator"></div>
+        <div>Visited Node</div>
+      </div>
+      <div class="indicator">
+        <div class="indicator-block" id="wall-indicator"></div>
+        <div>Wall</div>
+      </div>
+      <div class="indicator">
+        <div class="indicator-block" id="path-indicator"></div>
+        <div>Path</div>
+      </div>
+    </div>
+    <div id="container"></div>
+    <div id="buttonsdiv">
+      <button id="visualizeButton" class="btn btn-primary">Start</button>
+      <button id="clearButton" class="btn btn-primary">Clear Grid</button>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

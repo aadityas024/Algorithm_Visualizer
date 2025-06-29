@@ -1,0 +1,174 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #e0b350 !important;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  background-color:#e0b350;
+  height: 70px;
+}
+#header-right {
+  padding-left: 10px;
+  padding-top: 5px;
+}
+#title {
+  margin-top: 5%;
+  text-decoration: none;
+  text-align: center;
+  font-size: 27px;
+  color: #555;
+  padding-top: 20px;
+  font-weight: bold;
+}
+
+#algorithm_type {
+  float: right;
+  margin-top: -25px;
+  margin-right: 50px;
+  padding-left: 10px;
+  height: 30px;
+  width: 250px;
+  border-radius: 5px;
+  background-color: #555; /* Custom color */
+  color: white;
+  outline: none;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
+
+.btn {
+  background-color: #555 !important;
+  border: #e0b350 !important;
+}
+
+#indicator-container {
+  display: flex;
+  background-color: #555;
+  color: white;
+}
+.indicator {
+  display: flex;
+  /* color: white; */
+  font-weight: bold;
+  margin: 10px 20px;
+}
+.indicator-block {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+#start-indicator {
+  background-color: rgb(90, 255, 7);
+}
+#end-indicator {
+  background-color: red;
+}
+#visited-indicator {
+  background-color: rgb(255, 149, 0);
+}
+#wall-indicator {
+  background-color: rgb(47, 40, 40);
+}
+#path-indicator {
+  background-color: rgb(128, 0, 167);
+}
+
+.button:hover {
+  transform: scale(0.97);
+  font-size: 19px;
+  background: linear-gradient(to bottom right, #0b0d17, #212333);
+}
+.button > p {
+  margin-top: 8px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#buttonsdiv {
+  text-align: center;
+}
+#visualizeButton {
+  margin-right: 10px;
+}
+#clearButton {
+  margin-left: 10px;
+}
+
+.grid {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+.grid td {
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  border: 1px solid rgb(114, 161, 236);
+  text-align: center;
+  background-color: #555;
+}
+.grid td.clicked {
+  background-color: rgb(47, 40, 40);
+  animation: clicked_animation 1.5s 1;
+}
+
+.grid td.startPoint {
+  background-color: rgb(90, 255, 7);
+}
+
+.grid td.endPoint {
+  background-color: red;
+}
+
+.grid td.visited {
+  background-color: orange;
+  animation: visited_animation 2s 1;
+}
+
+@keyframes clicked_animation {
+  from {
+    background-color: rgb(0, 200, 255);
+  }
+  to {
+    /* background-color: yellow; */
+  }
+}
+
+@keyframes visited_animation {
+  from {
+    border-radius: 5px;
+    background-color: purple;
+  }
+  to {
+    border-radius: 0px;
+    background-color: orange;
+  }
+}
+
+.grid td.path {
+  background-color: rgb(128, 0, 167);
+  animation: change_color 1.5s 1;
+}
+@keyframes change_color {
+  from {
+    background-color: rgb(0, 255, 229);
+  }
+  to {
+    background-color: rgb(128, 0, 167);
+  }
+}
